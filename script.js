@@ -15295,11 +15295,15 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const offsetFromDate = new Date(2022, 0, 1)
-const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset / 1000 / 60 / 60 / 24
-console.log(msOffset, dayOffset, targetWords[35])
-const targetWord = targetWords[Math.floor(dayOffset)]
+
+// const offsetFromDate = new Date(2022, 0, 1)
+// const msOffset = Date.now() - offsetFromDate
+// const dayOffset = msOffset / 1000 / 60 / 60 / 24
+
+// const targetWord = targetWords[Math.floor(dayOffset)]
+const randomNum = Math.floor(Math.random() * 2314) + 2
+const targetWord = targetWords[randomNum]
+// console.log(randomNum, targetWord)
 
 startInteraction()
 
